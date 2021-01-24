@@ -15,13 +15,13 @@
             Calling without an object: this == undefined
             </p>
             <ul>
-                <li>•	Functions that are stored in object properties are called “methods”</li>
-                <li>•	Methods allow objects to “act” like object.doSomething()</li>
-                <li>•	Methods can reference the object as this</li>
+                <li>Functions that are stored in object properties are called “methods”</li>
+                <li>Methods allow objects to “act” like object.doSomething()</li>
+                <li>Methods can reference the object as this</li>
                 <li>The value of this is defined at run-time</li>
-                <li>•	When a function is declared, it may use this, but that this has no value until the function is called</li>
-                <li>•	A function can be copied between objects</li>
-                <li>•	When a function is called in the “method” syntax: object.method(), the value of this during the call is object</li>
+                <li>When a function is declared, it may use this, but that this has no value until the function is called</li>
+                <li>A function can be copied between objects</li>
+                <li>When a function is called in the “method” syntax: object.method(), the value of this during the call is object</li>
             </ul>
 
         <h1>Chapter 5: Object</h1>
@@ -56,8 +56,9 @@
                 << "Barry Allen"<br>
                 jla.aquaman['realName']
                 << "Arthur Curry"<br>
-                
+                <br>
                 how this can be done using a function called greet()<br>
+                <br>
                 function greet({greeting,name,age}) {<br>
                     return `${greeting}! My name is ${name} and I am ${age} years old.`;<br>
                 }<br>
