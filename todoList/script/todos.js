@@ -21,23 +21,38 @@ let clean = () => {
     document.querySelector('#content').value = "";
 }
 
+
 //list Check 
 let listCheck = (e) => {
     console.log(e.target.tagName);
+    let currentP = (e.target);
+    //console.log(todos);
     if (e.target.tagName === 'INPUT') {
         const id = parseInt(e.target.value);
         const todo = todos.find(todo => todo.Id === id);
-        todo.Completed = !todo.Completed;
         console.log(todo);
+        todo.Completed = !todo.Completed;
         storageArray();
-        location.reload();
+        setTodoList();
     }
-    if(e.target.tagName === "P"){
-        const id = parseInt(e.target.value);
+    if(e.target.tagName === 'P'){
+        console.log(e.target);
+        const id = parseInt(currentP.className);        
         const todo = todos.find(todo => todo.Id === id);
-        todos.pop(todo);
+        let x = todos.indexOf(todo);
+        todos.splice(x, 1);
         storageArray();
-        location.reload();
+        if(todos.length === 0){
+            let todoList = document.querySelector('#toDo');
+            todoList.innerHTML = "";
+            let finishedList = document.querySelector('#finished');
+            finishedList.innerHTML = "";
+            let listNumber = document.querySelector('.list-number');
+            listNumber.textContent = "Great! You are freeeee~~";
+            let finishNumber = document.querySelector('.finish-number');
+            finishNumber.textContent = "Do something!";
+        }
+        setTodoList();
     }
 }
 
@@ -66,7 +81,7 @@ let setTodoList = () => {
                         ${todo.Content}
                     </div>
                     <div class = "x">
-                        <p>x</p>
+                        <p class= "${todo.Id}">x</p>
                     </div>
                     `
                     todoList.appendChild(li);
@@ -84,20 +99,27 @@ let setTodoList = () => {
                         ${todo.Content}
                     </div>
                     <div class = "x">
-                        <p>x</p>
+                        <p class= "${todo.Id}">x</p>
                     </div>
                     `
                     finishedList.appendChild(li);
                 }
             });
 
+
             let listNumber = document.querySelector('.list-number');
             if(listNum === 0){
-                listNumber.textContent = "Great! You finished EVERYTHING!";
+                listNumber.textContent = "Great! You are freeeee~~";
             }else{
                 listNumber.textContent = "Only " + listNum + " Things to do";
             }
 
+            let finishNumber = document.querySelector('.finish-number');
+            if(finishNum === 0){
+                finishNumber.textContent = "Do something!";
+            }else{
+                finishNumber.textContent = "Great! You finieshed "+ finishNum + "things" ;
+            }
 
     }
 
