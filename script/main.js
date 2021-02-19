@@ -16,7 +16,10 @@ const links = [
     url4: "week4/index.html",
 
     label5: "Week 5",
-    url5: "week5/index.html"
+    url5: "week5/index.html",
+
+    label7: "Week 7",
+    url7: "week7/index.html"
 }
 
 ];
@@ -29,6 +32,8 @@ links.forEach(
         <li><a href = "${link.url3}">${link.label3}</li>
         <li><a href = "${link.url4}">${link.label4}</li>
         <li><a href = "${link.url5}">${link.label5}</li>
+        <li><a href = "${link.url7}">${link.label7}</li>
+
         `
         
     }
