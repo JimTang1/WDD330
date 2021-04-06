@@ -1,4 +1,6 @@
-let ol = document.querySelector('ol');
+let first = document.querySelector('.first');
+let second = document.querySelector('.second');
+
 
 
 const links = [
@@ -18,6 +20,9 @@ const links = [
     label5: "Week 5",
     url5: "week5/index.html",
 
+    label11: "ToDo List",
+    url11: "todoList/index.html",
+
     label7: "Week 7",
     url7: "week7/index.html",
 
@@ -28,23 +33,59 @@ const links = [
     url9: "week9/index.html",
 
     label10: "Week 10",
-    url10: "week10/index.html"
+    url10: "week10/index.html",
 }
 
 ];
 
+const links2 = [
+    {
+        label7: "Week 7",
+        url7: "week7/index.html",
+    
+        label8: "Week 8",
+        url8: "week8/index.html",
+    
+        label9: "Week 9",
+        url9: "week9/index.html",
+    
+        label10: "Week 10",
+        url10: "week10/index.html",
+
+        label12: "Final Project",
+        url12: "http://114.33.118.79/",
+
+        label13: "API work(Temple website)",
+        url13: "https://jimtang1.github.io/lesson13/temples.html",
+    }
+    
+    ];
+
 links.forEach(
     link =>{
-        ol.innerHTML +=
+        first.innerHTML +=
         `<li><a href = "${link.url}">${link.label}</li>
         <li><a href = "${link.url2}">${link.label2}</li>
         <li><a href = "${link.url3}">${link.label3}</li>
         <li><a href = "${link.url4}">${link.label4}</li>
         <li><a href = "${link.url5}">${link.label5}</li>
-        <li><a href = "${link.url7}">${link.label7}</li>
-        <li><a href = "${link.url8}">${link.label8}</li>
-        <li><a href = "${link.url9}">${link.label9}</li>
-        <li><a href = "${link.url10}">${link.label10}</li>
+        <li><a href = "${link.url11}">${link.label11}</li>
+        
         `
     }
+)
+
+    links2.forEach(
+        link =>{
+            second.innerHTML +=
+            `
+            <li><a href = "${link.url7}">${link.label7}</li>
+            <li><a href = "${link.url8}">${link.label8}</li>
+            <li><a href = "${link.url9}">${link.label9}</li>
+            <li><a href = "${link.url10}">${link.label10}</li>
+            <li><a href = "${link.url12}">${link.label12}</li>
+            <li><a href = "${link.url13}">${link.label13}</li>
+
+            `
+        }
 );
