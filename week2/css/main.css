@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header, footer{
+    background-color:lightsalmon;
+    color: white;
+    text-align: center;
+    font-family: 'Potta One', cursive;
+}
+
+header{
+    padding: 1px;
+}
+header h1{
+    padding: 15px;
+}
+
+main{
+    margin: 15px;
+}
+
+.activity{
+    font-family: fantasy;
+    
+}
+
+nav .ham{
+    width: 8px;
+    position: absolute;
+    right: 0px;
+    top: 46px;
+}
+
+
+nav{
+    margin: 0 auto;
+    max-width: 555px;
+    background-color: BurlyWood;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.navigation{
+    list-style:none;
+    padding:0;
+    display: grid;
+    grid-template-columns: auto;    
+    margin:auto;
+
+}
+
+.navigation li:first-child{
+    display: block;
+}
+
+.navigation li{
+    display: none;
+}
+
+.navigation a:link, .navigation a:visited, .navigation a:hover, .navigation a:active{
+    display: block;
+    padding: 0.75em;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+
+nav, ul:hover{
+    background-color: none;
+}
+
+.navigation a:hover{
+    color: white;
+    background-color: BurlyWood;
+}
+
+
+.navigation.responsive li{
+    display: block;
+}
